@@ -8,9 +8,9 @@ import matplotlib.patches as patches
 import numpy as np
 
 # === CONFIGURATION ===
-IMAGE_DIR = "C:/Users/NECTEC/Documents/Mask RCNN/pipe_4c/images/val"
-MODEL_PATH = "C:/Users/NECTEC/Documents/Mask RCNN/pipe_4c/models/maskrcnn_model.pth"
-RESULTS_DIR = "C:/Users/NECTEC/Documents/Mask RCNN/pipe_4c/results"
+IMAGE_DIR = "/images/val"
+MODEL_PATH = "/maskrcnn_model.pth"
+RESULTS_DIR = "/results"
 NUM_CLASSES = 5
 CONFIDENCE_THRESHOLD = 0.5
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -79,3 +79,4 @@ if __name__ == "__main__":
             print(f"Processing {filename}...")
             image, pred = predict(path)
             save_result(image, pred, save_path)
+
